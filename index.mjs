@@ -3,9 +3,7 @@ import {
   servicoValidaAno,
   servicoBuscarFatoPorAno,
 } from "./camada de serviço.mjs";
-import cors from "cors";
 const app = express();
-app.use(cors());
 app.get("/", (req, res) => {
   const anoFato = req.query.anoFato;
   if (servicoValidaAno(anoFato)) {

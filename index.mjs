@@ -3,9 +3,9 @@ import {
   servicoValidaAno,
   servicoBuscarFatoPorAno,
 } from "./camada de serviço.mjs";
-
+import cors from "cors";
 const app = express();
-
+app.use(cors());
 app.get("/", (req, res) => {
   const anoFato = req.query.anoFato;
   if (servicoValidaAno(anoFato)) {
@@ -18,7 +18,7 @@ app.get("/", (req, res) => {
   }
 });
 
-app.listen(8081, () => {
+app.listen(8089, () => {
   let data = new Date();
   console.log(`Porta Aberta ${data}`);
 });

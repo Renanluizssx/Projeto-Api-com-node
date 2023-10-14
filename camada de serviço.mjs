@@ -4,7 +4,6 @@ function servicoBuscarFatoPorAno(anoapi) {
 }
 
 function servicoValidaAno(anoapi) {
-
   if (!isNaN(anoapi)) {
     return true;
   }

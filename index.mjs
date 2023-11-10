@@ -4,6 +4,8 @@ import {
   servicoBuscarFatoPorAno,
 } from "./camada de serviço.mjs";
 const app = express();
+import cors from "cors";
+app.use(cors());
 app.get("/", (req, res) => {
   const anoFato = req.query.anoFato;
   if (servicoValidaAno(anoFato)) {
